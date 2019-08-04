@@ -1,0 +1,180 @@
+@import url('generales.css');
+/*-- responsive --*/
+/* básicos */
+.logoEnCel{
+	display: none;
+}
+
+/*Linea divisoria*/
+.linea-degrade {
+	height: 8px;
+	background-color: #FFBA51; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #FFBA51 , #905802); /* Standard syntax (must be last) */
+}
+
+.queHacemos {
+	text-align: center;
+}
+
+.queHacemos p {
+	font-size: 1.8em;
+	padding: 2%;
+}
+
+.historia h2{
+	text-align: center;
+	font-size: 3.5em;
+	color: #c08329;
+}
+
+.textoHistoria{
+	display: block;
+	margin: 0 auto;
+	text-align: justify;
+	width: 80%;
+	font-size: 1.8em;
+}
+
+.historia p {
+	color: #303c42;
+	padding: 2%;
+	font-size: 1.3em;
+}
+
+.animate {
+	background: -webkit-linear-gradient(#FFBA51, #905802); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#FFBA51, #905802); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FFBA51, #905802); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FFBA51, #905802); /* Standard syntax */
+	min-height: 1000px;
+	margin-top: 18px;
+}
+
+.animate h2 {
+	text-align: center;
+	color: white;
+	font-size: 3em;
+	margin: 5%;
+	padding-top: 5%;
+}
+
+.compra-flex {
+	padding-bottom: 3%;
+}
+
+.compra {
+	min-height: 250px;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	padding: 3%;
+	margin: 5%;
+	font-size: 2.5em
+}
+
+.iconoAnimateF {
+	width: 10%;
+}
+.compra{
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 5%;
+}
+
+.compra a {
+	color: #905802;
+}
+
+/*-- tablet --*/
+@media (min-width: 600px) {
+	.historia p {
+  	font-size: 0.8em;
+  }
+
+	.animate h2 {
+		font-size: 2.5em;
+		margin: 5%;
+		padding-top: 5%;
+	}
+
+	.compra {
+		font-size: 1.5em
+	}
+}
+
+/*-- desktop */
+@media (min-width: 900px) {
+	.main-header-index{
+		background-image: url(../images/banner-index.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		background-attachment: fixed;
+		min-height: 500px;
+	}
+
+	.logoEnCel{
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		padding-top: 5%;
+	}
+
+	.queHacemos p {
+		font-size: 1.4em;
+		padding: 4%;
+	}
+
+	.historia{
+		display: flex;
+		margin-left: 5%;
+	}
+
+	.textoHistoria {
+		width: 30%;
+		padding: 1%;
+	}
+
+	.historia h2 {
+		font-size: 3em;
+		padding: 2%;
+		font-weight: 100;
+		display: inline-block;
+	}
+
+	.historia p {
+		font-size: 0.7em;
+		text-align: left;
+	}
+
+	.animate {
+		justify-content: center;
+		margin-top: 18px;
+		min-height: 400px;
+	}
+
+	.animate h2 {
+		font-size: 2em;
+		margin: 2%;
+		padding-left: 3%;
+	}
+
+	.compra-flex {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		padding-bottom: 3%;
+	}
+
+	.compra {
+		width: 25%;
+		min-height: 250px;
+		border-radius: 8px;
+		padding: 1%;
+		margin: 2%;
+		font-size: 1em;
+	}
+
+	.iconoAnimateF {
+		width: 40px;
+	}
+}
