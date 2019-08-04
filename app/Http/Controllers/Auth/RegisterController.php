@@ -49,8 +49,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'user' => ['required', 'string', 'max:255', 'unique:users'],
+            'name' => ['required', 'string', 'max:20'],
+            'user' => ['required', 'string', 'max:20', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'country' => ['required'],
             'city' => ['nullable'],
@@ -61,6 +61,7 @@ class RegisterController extends Controller
           'unique' => 'El campo :attribute debe ser modificado',
           'min:5' => 'El campo :attribute debe tener al menos 5 caracteres',
           'max:255' => 'El campo :attribute puede tener un máximo de 255 caracteres',
+          'max:20' => 'El campo :attribute puede tener un máximo de 20 caracteres',
           'string' => 'El campo :attribute debe ser texto',
           'email' => 'Los datos ingresados en el campo :attribute no corresponden a un correo electrónico',
           'image' => 'El archivo que intenta subir no es tiene un formato de imagen válido',

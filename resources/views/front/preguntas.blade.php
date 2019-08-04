@@ -4,13 +4,12 @@
 
 @section('link_style')
   <link rel="stylesheet" href="/css/preguntas.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 @endsection
 
 @section('secondContent')
   <div class="container-perguntas">
-    <div class="linea-degrade-preguntas"></div>
     <h2 id="h2-preguntas">Lo más consultado</h2>
-
     <div class="preguntas-body">
       <div class="preguntas-pedido">
         <h3>Estado de mi pedido</h3>

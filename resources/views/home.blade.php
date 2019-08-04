@@ -3,67 +3,48 @@
 {{-- @extends('layouts.app') --}}
 @extends('front.template')
 
-
 @section('pageTitle', 'Perfil de Usuario')
 
-
 @section('link_style')
-
-  <link rel="stylesheet" href="/css/app.css">
-
-  <link rel="stylesheet" href="/css/styles.css">
-
-  <link rel="stylesheet" href="/css/perfil-de-usuario.css">
-
+  <link rel="stylesheet" href="/css/perfil.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 @endsection
-
-
-@section('navbar')
-  <header class="header-register">
-
-    <div class="logo-register">
-      <img src="images/logo-principal.png" alt="Bodega Andina">
-
-    </div>
-
-    @include('front.navbar')
-
-  </header>
-@endsection
-
 
 @section('mainContent')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Bienvenid@</div>
+{{--<img src="/storage/avatars/{{ $user->avatar }}" alt="">--}}
+<div class="perfilContainer">
+      <h1> Hola {{ Auth::user()->name }}</h1>
+        <img src="/storage/avatars/{{ Auth::user()->avatar }}" alt="">
+  </div>
+@endsection
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@section('secondContent')
+  {{-- 1er bloque --}}
+    <div class="line1">
+      <div class="servicios">
+        <a href="#"><img src="images/icons/icon-envios.png" alt="Envios"/></a>
+        <h3>Seguimiento de entrega</h3>
+      </div>
 
-                    Estas logueado Campe@n!!!
-                </div>
-                {{--<img src="/storage/avatars/{{ $user->avatar }}" alt="">--}}
-            </div>
-        </div>
+      <div class="servicios">
+        <a href="#"><img src="images/icons/icon-lista.png" alt="Lista"/></a>
+        <h3>Mis pedidos</h3>
+      </div>
     </div>
+    {{-- fin 1er bloque --}}
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Ultimos pedidos</div>
-                {{-- @foreach ($users as $user)
-                  <div class="card-body">
-                    <p>{{ $user->bill }}</p>
-                  </div>
-                @endforeach --}}
-            </div>
-        </div>
+    {{-- segundo bloque --}}
+    <div class="line2">
+      <div class="servicios">
+        <a href="#"><img src="images/icons/icon-tarjeta-dorada.png" alt="Pagos"/></a>
+        <h3>Mis pagos</h3>
+      </div>
+
+      <div class="servicios">
+        <a href="#"><img src="images/icons/icon-carrito.png" alt="Shop"/></a>
+        <h3>Mis compras</h3>
+      </div>
     </div>
-</div>
+    {{-- fin segundo bloque --}}
+  </div>
 @endsection

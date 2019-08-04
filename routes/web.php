@@ -12,10 +12,6 @@
 */
 
 // Rutas de front
-Route::get('/navbar', function () {
-  return view('front.navbar');
-});
-
 Route::get('/index', function () {
   return view('front.index');
 });
@@ -32,14 +28,6 @@ Route::get('/admin', function () {
   return view('front.admin');
 });
 
-Route::get('/perfil', function () {
-  return view('front.perfil');
-});
-
-Route::get('/footer', function () {
-  return view('front.footer');
-});
-
 // ruta a productos
 Route::get('/products', 'ProductosController@index');
 // Hay que hacerla nueva con la nueva lista de productos.
@@ -49,6 +37,9 @@ Route::get('/registrarme', function () {
   return view('front.register');
 });
 // ahora funcionan el register de laravel directamente
+
+// cerrar sesion
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // ruta a perfil de usuario
 // Cambiar a post

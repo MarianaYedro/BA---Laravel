@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/footer.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <footer>
 
   <div class="footBorder">

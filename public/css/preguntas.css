@@ -104,15 +104,10 @@
 
 /*-- desktop --*/
 @media (min-width: 900px){
-	.linea-degrade-preguntas{
-		margin: auto;
-		margin-top: 8%;
-		height: 1px;
-		/* background-color: #c08329;
-		background-image: linear-gradient(to right, #c08329, #C67A03); */
-		background-color: #FFBA51; /* For browsers that do not support gradients */
-	  background-image: linear-gradient(to right, #FFBA51 , #905802); /* Standard syntax (must be last) */
-	}
+  .container-preguntas{
+    padding-top: 60%;
+
+  }
 
   #campo{
     width: 50%;

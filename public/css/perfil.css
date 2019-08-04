@@ -67,6 +67,22 @@
 
 /*-- desktop --*/
 @media (min-width: 900px) {
+  .perfilContainer{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .perfilContainer h1{
+    text-align: center;
+  }
+
+  .perfilContainer img{
+    width: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
   .servicios{
     width: 20%;
     padding: 2%;

@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/navbar.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 @if (!Request::is('index'))
 <a href="index">
 <img src="/images/logo-principal.png" alt="logo" class="logo">
@@ -16,14 +17,17 @@
 		<li><a href="preguntas">Preguntas</a></li>
 		<li><a href="login"><strong>Clientes</strong></a></li>
 	</ul>
-  @if (!Request::is('index', 'products', 'preguntas', 'register', 'login'))
+  {{-- @if (!Request::is('index', 'products', 'preguntas', 'register', 'login')) --}}
+  @if (Auth::check())
   <div class="nav-perfil">
     <ul>
-      <li><a href="#">Editar Perfil  <img src="images/icons/icon-perfil.png" alt="Envios"/></a></li>
-      <li><a href="#">Cerrar sesión  <img src="images/icons/icon-logout.png" alt="Envios"/></a></li>
+      <li><strong>User: {{ Auth::user()->name }}</strong></li>
+      <li><strong><a href="#">Editar Perfil</a></strong></li>
+      <li><strong><a href="{{ route('logout') }}">{{ __('Cerrar sesión') }}</a></strong></li>
     </ul>
   </div>
-  @endif
+@endif
+  {{-- @endif --}}
 </nav>
 
 {{-- <div class="boton"><a href="login.php"><img src="images/icons/icon-logout.png" alt="" style="max-width: 10px;"></a></div> --}}

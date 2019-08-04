@@ -4,6 +4,7 @@
 
 @section('link_style')
   <link rel="stylesheet" href="/css/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 @endsection
 
 @section('header')

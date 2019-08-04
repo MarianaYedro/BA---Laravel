@@ -104,6 +104,7 @@
 /*-- desktop */
 @media (min-width: 900px) {
 	.main-header-index{
+		margin-top: 0;
 		background-image: url(../images/banner-index.jpg);
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
