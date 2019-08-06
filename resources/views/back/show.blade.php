@@ -11,8 +11,6 @@
 
   <link rel="stylesheet" href="/css/register.css">
 
-
-
 @endsection
 
 @section('navbar')

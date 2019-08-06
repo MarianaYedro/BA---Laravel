@@ -16,7 +16,7 @@ class isAdmin
      */
     public function handle($request, Closure $next)
     {
-      if (Auth::user() &&  Auth::user()->isAdmin === 1) {
+      if (Auth::user() &&  Auth::user()->isadmin === 1) {
         return $next($request);
         //debe ser este el error
       }

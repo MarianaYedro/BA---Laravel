@@ -42,7 +42,7 @@ Route::get('/prodmalbec/', 'ProductosController@varietalMalbec');
 //-----------------------------------------------------
 
 // ruta a index de admin
-Route::get('/admin', 'AdminController@index')/*->middleware('isAdmin')*/;
+Route::get('/admin', 'AdminController@index')->middleware('isAdmin');
 
 // dispara el guardado en la bd
 Route::post('/admin', 'AdminController@store');
@@ -64,26 +64,24 @@ Route::get('/products', 'ProductosController@index');
 // Hay que hacerla nueva con la nueva lista de productos
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
 
 //-----------------------------------------------------
-/*
+
 // ruta a registración
-Route::get('/registrarme', function () {
-  return view('front.register');
-});
+// Route::get('/registrarme', function () {
+//   return view('front.register');
+// });
 // ahora funcionan el register de laravel directamente
 
 // cerrar sesion
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // ruta a perfil de usuario
 // Cambiar a post
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')/*->name('home')*/;
+ /*Auth::routes();
+ Route::get('/home', 'HomeController@index');/*->name('home')*/
 
 // Route::get('/profile', function () {
 // 	if (Auth::user()) {

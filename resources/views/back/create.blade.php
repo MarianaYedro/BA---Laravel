@@ -1,7 +1,7 @@
 {{-- @extends('layouts.app') --}}
 @extends('front.template')
 
-@section('pageTitle', 'Crear Prod')
+@section('pageTitle', 'Crear Producto')
 
 @section('link_style')
 
@@ -10,16 +10,8 @@
   <link rel="stylesheet" href="/css/styles.css">
 
   <link rel="stylesheet" href="/css/register.css">
-
-
-
 @endsection
 
-@section('navbar')
-  <div class="cualquiernombre">
-    @include('front.navbar')
-  </div>
-@endsection
 
 @section('secondContent')
 

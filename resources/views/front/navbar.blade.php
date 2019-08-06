@@ -29,7 +29,7 @@
   <div class="nav-perfil">
     <ul>
       <li><strong>User: {{ Auth::user()->name }}</strong></li>
-      <li><strong><a href="home">Editar Perfil</a></strong></li>
+      <li><strong><a href="home">Perfil</a></strong></li>
       <li><strong><a href="{{ route('logout') }}">{{ __('Cerrar sesión') }}</a></strong></li>
 
     </ul>
