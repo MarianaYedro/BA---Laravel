@@ -46,7 +46,7 @@
     <div class="vinos-productos">
       @foreach ($products as $product)
         <div class="preguntas-pedido ventanaProducto">
-          <img src="/storage/vinos{{ $product->image }}" class="botella">
+          <img src="/storage/vinos/{{ $product->image }}" class="botella">
           <h3>{{ $product->name }}</h3>
           <p>{{ $product->varietal->name }}</p>
           <p>{{ $product->spec }}</p>
