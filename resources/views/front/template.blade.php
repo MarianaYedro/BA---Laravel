@@ -10,7 +10,7 @@
 	<body>
     <div class="container">
 			{{-- Barra de navegación --}}
-      @include('front.navbar')
+      {{-- @include('front.navbar') --}}
 
 			@yield('header')
       {{-- Contenido --}}
@@ -22,7 +22,7 @@
 
       @yield('fourthContent')
       {{-- Footer --}}
-      @include('front.footer')
+      {{-- @include('front.footer') --}}
       {{-- Lugar para javaScript --}}
       @yield('javaScript')
 

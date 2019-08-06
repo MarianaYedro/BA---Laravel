@@ -11,16 +11,6 @@
     <link rel="stylesheet" href="/css/preguntas-frecuentes.css">
 
     <link rel="stylesheet" href="/css/products.css">
-
-
-
-
-@endsection
-
-@section('navbar')
-  <div class="cualquiernombre">
-    @include('front.navbar')
-  </div>
 @endsection
 
 
@@ -95,7 +85,6 @@
 
 @section('secondContent')
   <script type="text/javascript">
-
   $('.carousel').carousel({
     interval: 2000
   })
