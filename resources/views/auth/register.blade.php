@@ -87,7 +87,7 @@
                               <label for="country" class="col-md-4 col-form-label text-md-right">Provincia:</label>
 
                               <div class="col-md-6">
-                                <select class="form-control @error('provincia') is-invalid @enderror" name="provincia" id="provincia">
+                                <select class="form-control @error('provincia') is-invalid @enderror" name="city" id="provincia">
 
                                   <option value="">Seleccione una Provincia</option>
                                 </select>

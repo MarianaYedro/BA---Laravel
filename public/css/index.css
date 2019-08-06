@@ -17,13 +17,13 @@
 }
 
 .queHacemos p {
-	font-size: 1.8em;
+	font-size: 15px;
 	padding: 2%;
 }
 
 .historia h2{
 	text-align: center;
-	font-size: 3.5em;
+	font-size: 20px;
 	color: #c08329;
 }
 
@@ -32,13 +32,13 @@
 	margin: 0 auto;
 	text-align: justify;
 	width: 80%;
-	font-size: 1.8em;
+	font-size: 20px;
 }
 
 .historia p {
 	color: #303c42;
 	padding: 2%;
-	font-size: 1.3em;
+	font-size: 15px;
 }
 
 .animate {
@@ -53,7 +53,7 @@
 .animate h2 {
 	text-align: center;
 	color: white;
-	font-size: 3em;
+	font-size: 16px;
 	margin: 5%;
 	padding-top: 5%;
 }
@@ -68,7 +68,7 @@
 	border-radius: 8px;
 	padding: 3%;
 	margin: 5%;
-	font-size: 2.5em
+	font-size: 12px
 }
 
 .iconoAnimateF {
@@ -87,17 +87,22 @@
 /*-- tablet --*/
 @media (min-width: 600px) {
 	.historia p {
-  	font-size: 0.8em;
+  	font-size: 20px;
   }
 
+	.queHacemos p {
+		font-size: 18px;
+		padding: 2%;
+	}
+
 	.animate h2 {
-		font-size: 2.5em;
+		font-size: 20px;
 		margin: 5%;
 		padding-top: 5%;
 	}
 
 	.compra {
-		font-size: 1.5em
+		font-size:15px
 	}
 }
 
@@ -121,7 +126,7 @@
 	}
 
 	.queHacemos p {
-		font-size: 1.4em;
+		font-size: 20px;
 		padding: 4%;
 	}
 
@@ -136,14 +141,14 @@
 	}
 
 	.historia h2 {
-		font-size: 3em;
+		font-size: 22px;
 		padding: 2%;
 		font-weight: 100;
 		display: inline-block;
 	}
 
 	.historia p {
-		font-size: 0.7em;
+		font-size: 18px;
 		text-align: left;
 	}
 
@@ -154,7 +159,7 @@
 	}
 
 	.animate h2 {
-		font-size: 2em;
+		font-size: 20px;
 		margin: 2%;
 		padding-left: 3%;
 	}
@@ -164,6 +169,7 @@
 		margin: 0 auto;
 		display: flex;
 		padding-bottom: 3%;
+		margin-left: 5%;
 	}
 
 	.compra {
@@ -172,7 +178,7 @@
 		border-radius: 8px;
 		padding: 1%;
 		margin: 2%;
-		font-size: 1em;
+		font-size: 16px;
 	}
 
 	.iconoAnimateF {

@@ -25,9 +25,21 @@ class ProductosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function varietal()
+    {
+      // $varietals = Varietal::all();
+      // return view('front/prodmalbec', compact('varietals'));
+
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -38,7 +50,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -49,7 +61,9 @@ class ProductosController extends Controller
      */
     public function show($id)
     {
-        //
+      $product = Product::find($id);
+
+  		return view('front.showprod', compact('product'));
     }
 
     /**

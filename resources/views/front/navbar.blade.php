@@ -17,13 +17,21 @@
 		<li><a href="preguntas">Preguntas</a></li>
 		<li><a href="login"><strong>Clientes</strong></a></li>
 	</ul>
+
+  @if (Auth::check() && Auth::user()->isadmin === 1 )
+    <div class="nav-perfil">
+        <a href="admin">ADMINISTRADOR</a></li>
+    </div>
+  @endif
+
   {{-- @if (!Request::is('index', 'products', 'preguntas', 'register', 'login')) --}}
   @if (Auth::check())
   <div class="nav-perfil">
     <ul>
       <li><strong>User: {{ Auth::user()->name }}</strong></li>
-      <li><strong><a href="#">Editar Perfil</a></strong></li>
+      <li><strong><a href="home">Editar Perfil</a></strong></li>
       <li><strong><a href="{{ route('logout') }}">{{ __('Cerrar sesión') }}</a></strong></li>
+
     </ul>
   </div>
 @endif

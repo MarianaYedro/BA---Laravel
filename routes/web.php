@@ -11,27 +11,64 @@
 |
 */
 
-// Rutas de front
+// rutas de front
+// index
 Route::get('/index', function () {
   return view('front.index');
 });
 
+// preguntas
 Route::get('/preguntas', function () {
   return view('front.preguntas');
 });
 
-Route::get('/products', function () {
-  return view('front.products');
-});
+// Route::get('/products', function () {
+//   return view('front.products');
+// });
 
-Route::get('/admin', function () {
-  return view('front.admin');
-});
+// Route::get('/admin', function () {
+//   return view('front.admin');
+// });
+
+// ruta a productos
+Route::get('/productos/', 'ProductosController@index');
+
+// mostrar producto
+Route::get('/showprod/{id}', 'ProductosController@show');
+
+Route::get('/prodmalbec/', 'ProductosController@varietalMalbec');
+// seguir trabajando
+
+//-----------------------------------------------------
+
+// ruta a index de admin
+Route::get('/admin', 'AdminController@index')/*->middleware('isAdmin')*/;
+
+// dispara el guardado en la bd
+Route::post('/admin', 'AdminController@store');
+
+// ruta a formulario de crear vino
+Route::get('/create', 'AdminController@create');
+
+// seek and destroy del producto
+Route::delete('/admin/{id}', 'AdminController@destroy');
+
+// mostrar producto
+Route::get('/show/{id}', 'AdminController@show');
+
+// edit de producto
+Route::get('/admin/{id}/edit', 'AdminController@edit');
 
 // ruta a productos
 Route::get('/products', 'ProductosController@index');
-// Hay que hacerla nueva con la nueva lista de productos.
+// Hay que hacerla nueva con la nueva lista de productos
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+//-----------------------------------------------------
+/*
 // ruta a registración
 Route::get('/registrarme', function () {
   return view('front.register');
