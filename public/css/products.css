@@ -88,12 +88,17 @@
     height: 100%;
   }
 
+  .vinos-productos{
+    width: 30%;
+  }
+
   .categoriasProductos{
     display: block;
     background-color: #f4f4f4;
     padding: 2%;
     padding-top: 5%;
-    width: 100%;
+    margin-right: 5%;
+    width: 25%;
     border-right: solid 2px #d5d5d5;
   }
 

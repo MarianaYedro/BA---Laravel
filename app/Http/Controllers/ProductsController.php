@@ -1,11 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Product;
-
 class ProductosController extends Controller
 {
     /**
@@ -16,10 +12,8 @@ class ProductosController extends Controller
     public function index()
     {
       $products = Product::All();
-
       return view('front/products', compact('products'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -27,11 +21,9 @@ class ProductosController extends Controller
      */
     public function varietal()
     {
-      // $varietals = Varietal::all();
-      // return view('front/prodmalbec', compact('varietals'));
-
+      $varietals = Varietal::all();
+      return view('front/prodmalbec', compact('varietals'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -39,9 +31,7 @@ class ProductosController extends Controller
      */
     public function create()
     {
-
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -50,9 +40,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-
     }
-
     /**
      * Display the specified resource.
      *
@@ -62,10 +50,8 @@ class ProductosController extends Controller
     public function show($id)
     {
       $product = Product::find($id);
-
   		return view('front.showprod', compact('product'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -76,7 +62,6 @@ class ProductosController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -88,7 +73,6 @@ class ProductosController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

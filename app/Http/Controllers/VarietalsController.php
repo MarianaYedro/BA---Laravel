@@ -14,7 +14,6 @@ class VarietalsController extends Controller
     public function index()
     {
       $varietals = Varietal::All();
-
       return view('front/products', compact('varietal'));
     }
 

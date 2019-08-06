@@ -3,59 +3,30 @@
 @section('pageTitle', 'Administrador de Productos')
 
 @section('link_style')
-
   <link rel="stylesheet" href="/css/app.css">
-
-  <link rel="stylesheet" href="/css/styles.css">
-
-  <link rel="stylesheet" href="/css/preguntas-frecuentes.css">
-
   <link rel="stylesheet" href="/css/admin.css">
-
-
-
-@endsection
-
-@section('navbar')
-  <div class="cualquiernombre">
-    @include('front.navbar')
-  </div>
 @endsection
 
 @section('mainContent')
-
-  <div class="titulo-productos">
-
+  <div class="vinosTitulo">
     <h2>Nuestros Productos</h2>
-
     <h3>Hola Admin</h3>
-
   </div>
-
 @endsection
 
 @section('secondContent')
-  <div class="container-productos">
-
-    <div class="preguntas-body">
-
+  <div class="contVinos1">
+    <div class="botonCrear">
       <a href="/create" type="button" name="button" class="btn alert-secondary">Crear Vino</a>
-
     </div>
-
   </div>
-
-
 @endsection
 
 @section('thirdContent')
-
-  <div class="container-productos">
-
-    <div class="preguntas-body">
-
+  <div class="contVinos">
+    <div class="vinosTodos">
       @foreach ($adminProducts as $adminProduct)
-        <div class="preguntas-pedido ventanaProducto">
+        <div class="cajaVino">
           <img src="/storage/vinos/{{ $adminProduct->image }}" class="botella">
           <h3>{{ $adminProduct->name }}</h3>
           <p>{{ $adminProduct->varietal->name }}</p>

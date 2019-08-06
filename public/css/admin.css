@@ -1,43 +1,44 @@
-/* @import url('normalize.css');
-
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
-
-@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
-
-*{
-box-sizing: border-box;
-}
-
-img{
-  width: 100%;
-}
-
-body{
-  font-family: "rubik" , sans-serif;
-  margin: 0 auto;
-  color: #303c42;
-}
-
-ul, li{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a{
-  text-decoration: none;
-  color:inherit;
-  display: inline-block;
-}
-
 /*-- responsive --*/
 
 h1{
   text-align: center;
 }
 
-.admProd{
+/* .admProd{
   margin: 0 auto;
   width: 70%;
   background-color: #f1eeee;
 } */
+.contVinos1{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vinosTitulo{
+  text-align: center;
+}
+
+.botonCrear{
+  text-align: center;
+}
+
+.contVinos{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vinosTodos{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.vinosTodos img{
+  width: 30%;
+}
+
+.cajaVino{
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
