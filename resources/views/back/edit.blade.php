@@ -13,6 +13,8 @@
 
 
 
+
+
 @endsection
 
 @section('navbar')
@@ -30,21 +32,29 @@
                   {{-- <div class="card-header">{{ __('Register') }}</div> --}}
 
                   <div class="card-body">
-                      <form method="post" action="/admin" enctype="multipart/form-data">
+                      <form method="post" action="/admin/{{ $productToEdit->id }}" enctype="multipart/form-data">
                           @csrf
+
+                          {{ method_field('put') }}
 
                           {{-- Nombre --}}
                           <div class="form-group row">
                               <label for="name" class="col-md-4 col-form-label text-md-right">Nombre</label>
 
                               <div class="col-md-6">
-                                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                      name="name"
+                                      value="{{ old('name', $productToEdit->name) }}"
+                                      autofocus
+                                    >
 
-                                  @error('name')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
+                                  @if ($errors->has('name'))
+                                    <span class="text-danger">
+                                      {{ $errors->first('name') }}
+                                    </span>
+                                  @endif
                               </div>
                           </div>
 
@@ -54,13 +64,19 @@
                               <label for="spec" class="col-md-4 col-form-label text-md-right">{{ __('Detalle') }}</label>
 
                               <div class="col-md-6">
-                                  <input id="spec" type="text" class="form-control @error('spec') is-invalid @enderror" name="spec" value="{{ old('spec') }}" required autocomplete="user" autofocus>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="spec"
+                                    value="{{ old('spec', $productToEdit->spec) }}"
+                                    autofocus
+                                  >
 
-                                  @error('spec')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
+                                  @if ($errors->has('spec'))
+                                    <span class="text-danger">
+                                      {{ $errors->first('spec') }}
+                                    </span>
+                                  @endif
                               </div>
                           </div>
 
@@ -70,17 +86,19 @@
                             <select class="col-md-6" name="varietal_id">
                               <option value="" class="form-control">Elegí una opción</option>
                               @foreach ($varietals as $varietal)
-                                <option id="varietal_id" value="{{ $varietal->id }}">{{ $varietal->name }}</option>
+                                <option
+                                  value="{{ $varietal->id }}"
+                                  {{ $varietal->id === $productToEdit->varietal_id ? 'selected' : null }}
+                                </option>
                               @endforeach
+
+                              @if ($errors->has('varietal_id'))
+                                <span class="text-danger">
+                                  {{ $errors->first('varietal_id') }}
+                                </span>
+                              @endif
                             </select>
-                            <div class="invalid-feedback">
-                              Aquí va el error del genre_id
-                            </div>
-                            @if ($errors->has('varietal_id'))
-                              <span class="text-danger">
-                                {{ $errors->first('varietal_id') }}
-                              </span>
-                            @endif
+
                           </div>
 
                           {{-- Precio --}}
@@ -88,13 +106,19 @@
                               <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('Precio') }}</label>
 
                               <div class="col-md-6">
-                                  <input id="name" type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="price"
+                                    value="{{ old('price', $productToEdit->price) }}"
+                                    autofocus
+                                  >
 
-                                  @error('price')
-                                      <span class="invalid-feedback" role="alert">
-                                          <strong>{{ $message }}</strong>
-                                      </span>
-                                  @enderror
+                                  @if ($errors->has('price'))
+                                    <span class="text-danger">
+                                      {{ $errors->first('price') }}
+                                    </span>
+                                  @endif
                               </div>
                           </div>
 

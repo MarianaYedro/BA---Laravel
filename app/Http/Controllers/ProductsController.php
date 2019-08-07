@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
+use App\Varietal;
 class ProductosController extends Controller
 {
     /**
@@ -12,17 +13,40 @@ class ProductosController extends Controller
     public function index()
     {
       $products = Product::All();
-      return view('front/products', compact('products'));
+      $varieCabernet = Varietal::find(1);
+      $varieMalbec = Varietal::find(2);
+      $varieTorrontes = Varietal::find(3);
+      return view('front/products', compact('products', 'varieCabernet', 'varieMalbec', 'varieTorrontes'));
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function varietal()
+    public function varietalMalbec()
     {
       $varietals = Varietal::all();
       return view('front/prodmalbec', compact('varietals'));
+    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function varietalCabernet()
+    {
+      $varietals = Varietal::all();
+      return view('front/prodcabernet', compact('varietals'));
+    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function varietalTorrontes()
+    {
+      $varietals = Varietal::all();
+      return view('front/prodtorrontes', compact('varietals'));
     }
     /**
      * Show the form for creating a new resource.

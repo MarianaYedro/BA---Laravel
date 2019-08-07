@@ -48,20 +48,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-{{--
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/storage/vinos/{{ $product->image }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/storage/vinos/mockup-botella.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="/storage/vinos/{{ $product->image }}" class="d-block w-100" alt="...">
-            </div>
-          </div>
-        </div> --}}
+
 
 
 
@@ -71,7 +58,7 @@
             {{-- <p>{{ $product->varietal->name }}</p> --}}
             <p>{{ $product->spec }}</p>
             <strong><p class="precio">$ {{ $product->price }}</p></strong>
-            {{-- <a href="/show" name="button" class="comprar">Ver más</a> --}}
+            <a href="/productos/" name="button" class="comprar">Volver</a>
           </div>
 
 

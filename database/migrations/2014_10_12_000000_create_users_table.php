@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('avatar');
             $table->string('country');
             $table->string('city');
+            $table->tinyInteger('isadmin')->nullable()->default(0);
             // $table->string('bill');
             $table->rememberToken();
             $table->timestamps();

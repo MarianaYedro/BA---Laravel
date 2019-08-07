@@ -8,6 +8,6 @@ class Varietal extends Model
 {
   public function product()
   {
-    return $this->hasmany("App\Product", "varietal_id");
+    return $this->hasMany("App\Product", "varietal_id");
   }
 }

@@ -37,7 +37,9 @@ Route::get('/productos/', 'ProductosController@index');
 Route::get('/showprod/{id}', 'ProductosController@show');
 
 Route::get('/prodmalbec/', 'ProductosController@varietalMalbec');
-// seguir trabajando
+Route::get('/prodcabernet/', 'ProductosController@varietalCabernet');
+Route::get('/prodtorrontes/', 'ProductosController@varietalTorrontes');
+
 
 //-----------------------------------------------------
 
@@ -57,7 +59,8 @@ Route::delete('/admin/{id}', 'AdminController@destroy');
 Route::get('/show/{id}', 'AdminController@show');
 
 // edit de producto
-Route::get('/admin/{id}/edit', 'AdminController@edit');
+// Route::get('/admin/{id}/edit', 'AdminController@edit');
+Route::get('/edit/{id}', 'AdminController@edit');
 
 // ruta a productos
 Route::get('/products', 'ProductosController@index');

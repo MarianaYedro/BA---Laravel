@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Varietal;
 
 class VarietalsController extends Controller
 {
@@ -14,7 +15,7 @@ class VarietalsController extends Controller
     public function index()
     {
       $varietals = Varietal::All();
-      return view('front/products', compact('varietal'));
+      return view('front/products', compact('varietals'));
     }
 
     /**
@@ -46,7 +47,7 @@ class VarietalsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

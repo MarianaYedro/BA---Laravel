@@ -32,7 +32,8 @@
           <p>{{ $adminProduct->varietal->name }}</p>
           <p>{{ $adminProduct->spec }}</p>
           <strong><p class="precio">$ {{ $adminProduct->price }}</p></strong>
-          <a href="/admin/{id}/edit" type="button" name="button" class="btn alert-secondary">Ver mas</a>
+          {{-- <a href="/admin/{id}/edit" type="button" name="button" class="btn alert-secondary">Editar</a> --}}
+          <a href="/edit/{{ $adminProduct->id }}" type="button" name="button" class="btn alert-secondary">Editar</a>
           <form action="/admin/{{ $adminProduct->id }}" method="post">
             @csrf
             {{ method_field('delete') }}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Product;
+use App\Varietal;
 
 class AdminController extends Controller
 {
@@ -104,7 +105,11 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+  		$productToEdit = \App\Product::find($id);
+
+  		$varietals = \App\Varietal::orderBy('name')->get();
+
+  		return view('back.edit', compact('productToEdit', 'varietals'));
     }
 
     /**
