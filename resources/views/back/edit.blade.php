@@ -29,13 +29,17 @@
       <div class="row justify-content-center">
           <div class="col-md-8">
               <div class="card">
-                  {{-- <div class="card-header">{{ __('Register') }}</div> --}}
+
 
                   <div class="card-body">
-                      <form method="post" action="/admin/{{ $productToEdit->id }}" enctype="multipart/form-data">
+                      <form
+                        action="/admin/edit/{{ $productToEdit->id }}"
+                        method="post"
+                        enctype="multipart/form-data"
+                      >
                           @csrf
 
-                          {{ method_field('put') }}
+                          {{ method_field('PUT') }}
 
                           {{-- Nombre --}}
                           <div class="form-group row">
@@ -45,9 +49,9 @@
                                   <input
                                     type="text"
                                     class="form-control"
-                                      name="name"
-                                      value="{{ old('name', $productToEdit->name) }}"
-                                      autofocus
+                                    name="name"
+                                    value="{{ old('name', $productToEdit->name) }}"
+                                    autofocus
                                     >
 
                                   @if ($errors->has('name'))
@@ -126,7 +130,12 @@
                           <div class="form-group row">
                               <label for="image" class="col-md-6">Imágen</label>
 
-                              <input id="image" type="file" class="col-md-6 @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" autocomplete="image">
+                              <input
+                                type="file"
+                                class="col-md-6"
+                                name="image"
+                                value="{{ old('image') }}"
+                                autocomplete="image">
 
                                 @error('image')
                                   <span class="invalid-feedback" role="alert">

@@ -32,6 +32,12 @@ Route::get('/preguntas', function () {
 
 // ruta a productos
 Route::get('/productos/', 'ProductosController@index');
+// ruta a productos
+Route::get('/products', 'ProductosController@index');
+// Hay que hacerla nueva con la nueva lista de productos
+
+Route::get('/busqueda', 'ProductosController@search');
+Route::get('/products/result', 'ProductosController@result');
 
 // mostrar producto
 Route::get('/showprod/{id}', 'ProductosController@show');
@@ -59,12 +65,10 @@ Route::delete('/admin/{id}', 'AdminController@destroy');
 Route::get('/show/{id}', 'AdminController@show');
 
 // edit de producto
-// Route::get('/admin/{id}/edit', 'AdminController@edit');
 Route::get('/edit/{id}', 'AdminController@edit');
+// guarda el prod editado, en tu cara error de sintaxis
+Route::put('/admin/edit/{id}', 'AdminController@update');
 
-// ruta a productos
-Route::get('/products', 'ProductosController@index');
-// Hay que hacerla nueva con la nueva lista de productos
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');

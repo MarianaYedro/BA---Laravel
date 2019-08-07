@@ -107,4 +107,15 @@ class ProductosController extends Controller
     {
         //
     }
+    public function search()
+    {
+      return view('front.busqueda');
+    }
+
+    public function result(Request $request)
+    {
+      $products = Product::where('name', 'LIKE', '%' . $request->word . '%')->get();
+
+      return view('front.result', compact('products'));
+    }
 }

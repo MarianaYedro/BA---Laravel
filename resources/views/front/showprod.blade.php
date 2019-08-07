@@ -55,7 +55,7 @@
 
           <div class="preguntas-pedido ventanaProducto">
             <h3>{{ $product->name }}</h3>
-            {{-- <p>{{ $product->varietal->name }}</p> --}}
+            <p>{{ $product->varietal->name }}</p>
             <p>{{ $product->spec }}</p>
             <strong><p class="precio">$ {{ $product->price }}</p></strong>
             <a href="/productos/" name="button" class="comprar">Volver</a>

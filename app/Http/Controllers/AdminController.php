@@ -121,7 +121,29 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $productToUpdate = Product::find($id);
+
+  		$productToUpdate->name = $request->input('name');
+  		$productToUpdate->spec = $request->input('spec');
+  		$productToUpdate->varietal_id = $request->input('varietal_id');
+  		$productToUpdate->price = $request->input('price');
+
+  		// Obtengo el archivo que viene en el formulario (Objeto de Laravel) que tiene a su vez el archivo de la imagen
+  		$image = $request->file('image'); // El value del atributo name del input file
+
+  		if ($image) {
+
+        $imagenFinal = uniqid("win_") . "." . $image->extension();
+
+        $image->storePubliclyAs("public/vinos", $imagenFinal);
+
+        $productToUpdate->image = $imagenFinal;
+  		}
+
+  		$productToUpdate->save();
+
+  		// Redireccionamos SIEMPRE a una RUTA
+  		return redirect('/admin');
     }
 
     /**

@@ -29,7 +29,13 @@
         <li><a href="/prodtorrontes/"> Torrontes </a></li>
       </ul>
 
-      </div>
+      <h3>Buscador</h3>
+
+      <ul>
+        <li><a href="/busqueda"> Buscar por nombre </a></li>
+      </ul>
+    </div>
+
     <!-- /#sidebar-wrapper -->
 @endsection
 

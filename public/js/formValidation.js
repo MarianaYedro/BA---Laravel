@@ -180,6 +180,10 @@ theForm.addEventListener('submit',function(event) {
 
   console.log('campos con errores' , errorsObj);
 
+  if (Object.city(errorsObj)) {
+    Object.city(errorsObj) = false;
+  }
+
   if (Object.keys(errorsObj).length > 0){
     event.preventDefault();
   }
