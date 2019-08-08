@@ -3,7 +3,7 @@
 @section('pageTitle', 'Productos')
 
 @section('link_style')
-  {{-- <link rel="stylesheet" href="/css/app.css"> --}}
+  <link rel="stylesheet" href="/css/app.css">
   {{-- <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/preguntas-frecuentes.css"> --}}
   <link rel="stylesheet" href="/css/products.css">
@@ -43,11 +43,11 @@
   {{-- <div class="container-productos"> --}}
     <div class="vinos-productos">
       @foreach ($products as $product)
-        <div class="preguntas-pedido ventanaProducto">
+        <div class="preguntas-pedido ventanaProducto card-body">
           <img src="/storage/vinos/{{ $product->image }}" class="botella">
-          <h3>{{ $product->name }}</h3>
-          <p>{{ $product->varietal->name }}</p>
-          <p>{{ $product->spec }}</p>
+          <h3 class="card-text">{{ $product->name }}</h3>
+          <p class="card-text"> {{ $product->varietal->name }}</p>
+          <p class="card-text">{{ $product->spec }}</p>
           <strong><p class="precio">$ {{ $product->price }}</p></strong>
           <a href="/showprod/{{ $product->id }}" name="button" class="comprar">Ver más</a>
         </div>

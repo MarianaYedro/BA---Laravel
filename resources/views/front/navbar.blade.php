@@ -12,15 +12,15 @@
 
 <nav class="nav">
 	<ul>
-		<li><a href="index">Home</a></li>
-		<li><a href="products">Productos</a></li>
-		<li><a href="preguntas">Preguntas</a></li>
-		<li><a href="login"><strong>Clientes</strong></a></li>
+		<li><a href="/index">Home</a></li>
+		<li><a href="/products">Productos</a></li>
+		<li><a href="/preguntas">Preguntas</a></li>
+		<li><a href="/login"><strong>Clientes</strong></a></li>
 	</ul>
 
   @if (Auth::check() && Auth::user()->isadmin === 1 )
     <div class="nav-perfil">
-        <a href="admin">ADMINISTRADOR</a></li>
+        <a href="/admin">ADMINISTRADOR</a></li>
     </div>
   @endif
 

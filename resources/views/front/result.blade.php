@@ -3,7 +3,7 @@
 @section('pageTitle', 'Productos')
 
 @section('link_style')
-  {{-- <link rel="stylesheet" href="/css/app.css"> --}}
+  <link rel="stylesheet" href="/css/app.css">
   {{-- <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/preguntas-frecuentes.css"> --}}
   <link rel="stylesheet" href="/css/products.css">
@@ -20,8 +20,6 @@
     <div class="container-productos">
       <ul>
     		@forelse ($products as $product)
-
-
           <div class="preguntas-pedido ventanaProducto">
             <img src="/storage/vinos/{{ $product->image }}" class="botella">
             <h3><strong>{{ $product->name }} </strong></h3>
